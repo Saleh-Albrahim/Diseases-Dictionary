@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Red"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/SplashPC"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:src="@drawable/drug"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/SplashKeyboard"
+        android:layout_width="match_parent"
+        android:text="دليل الامراض"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:layout_height="125dp"
+        android:textSize="50dp"
+        android:layout_gravity="center"
+        />
+
+
+
+    </LinearLayout>

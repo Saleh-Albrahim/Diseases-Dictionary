@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "517813136856",
+    "firebase_url": "https://diseases-dictionary-97027.firebaseio.com",
+    "project_id": "diseases-dictionary-97027",
+    "storage_bucket": "diseases-dictionary-97027.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517813136856:android:d43ebad0865ecc93c1d6ad",
+        "android_client_info": {
+          "package_name": "com.example.diseasesdictionary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517813136856-mq2f6o24eum88hk8h9sdofb92f6r92bo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.diseasesdictionary",
+            "certificate_hash": "32b5f564caae8c5028bc7696058bf15a21f3f6ad"
+          }
+        },
+        {
+          "client_id": "517813136856-svfcgnca3n7j0np3ib46sffkosbkid2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5xeZLYylLwKlgmYxi7mQQo8PIjHxOsdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517813136856-svfcgnca3n7j0np3ib46sffkosbkid2h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

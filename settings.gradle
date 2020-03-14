@@ -1,0 +1,2 @@
+rootProject.name='Diseases Dictionary'
+include ':app'
