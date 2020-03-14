@@ -35,7 +35,7 @@
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:onClick="SearchD"
+            android:onClick="goToSearch"
             android:background="@drawable/round_button"
             android:layout_marginBottom="15dp">
 

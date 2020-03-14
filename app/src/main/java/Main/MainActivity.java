@@ -3,15 +3,16 @@ package Main;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.diseasesdictionary.Main2Activity;
 import com.example.diseasesdictionary.R;
 
 import Fragments.MainFragment;
+import Fragments.SearchFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,7 +26,13 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
     }
 
-    public void SearchD(View view) {
-        startActivity(new Intent(this, Main2Activity.class));
+    public void goToSearch(View view) {
+        SearchFragment fragment = new SearchFragment();
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        transaction.setCustomAnimations(android.R.anim.fade_in,android.R.anim.fade_out, android.R.anim.fade_in, android.R.anim.fade_out);
+        transaction.replace(R.id.container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }

@@ -42,18 +42,6 @@ public class MainFragment extends Fragment {
         getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        Connection con = null;
-        try {
-
-            con = DriverManager.getConnection("jdbc:mysql://localhost", "root", "");
-           Statement st = con.createStatement();
-            System.out.println("hey");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-
-
 
         return view;
     }

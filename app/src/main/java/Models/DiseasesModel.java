@@ -2,8 +2,18 @@ package Models;
 
 public class DiseasesModel
 {
-    private String id, desc, title,url;
+    private String description,id,title,url;
 
+    public DiseasesModel(){
+
+    }
+
+    public DiseasesModel(String description, String id, String title, String url) {
+        this.description = description;
+        this.id = id;
+        this.title = title;
+        this.url = url;
+    }
 
     public String getTitle() {
         return title;
@@ -29,12 +39,12 @@ public class DiseasesModel
         this.id = id;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 
