@@ -45,16 +45,6 @@ public class SearchFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_search, container, false);
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
         getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        Init();
-
-
-
-        return view;
-    }
-
-    private void Init(){
-
         data = new ArrayList<>();
         fragment = new DetailsFragment();
         bundle=new Bundle();
@@ -74,11 +64,10 @@ public class SearchFragment extends Fragment {
 //                    Log.d(TAG,  d.getDescription());
 //                    Log.d(TAG,  d.getUrl());
 //                    Log.d(TAG,  d.getId());
-
-
                 }
                 DataADB itemsAdapter = new DataADB(view.getContext(), data);
                 ListView listView =  view.findViewById(R.id.list);
+                itemsAdapter.notifyDataSetChanged();
                 listView.setAdapter(itemsAdapter);
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -102,9 +91,9 @@ public class SearchFragment extends Fragment {
             }
 
         });
-
+        return view;
     }
-    
+
 
 
 

@@ -22,9 +22,10 @@
         android:text="دليل الامراض"
         android:gravity="center"
         android:textStyle="bold"
+        android:fontFamily="@font/questv1_regular"
         android:textColor="#ffffff"
         android:layout_height="125dp"
-        android:textSize="50dp"
+        android:textSize="60sp"
         android:layout_gravity="center"
         />
 

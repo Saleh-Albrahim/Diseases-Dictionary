@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+android:layout_width="match_parent"
+android:layout_height="500dp"
+android:layout_gravity="center"
+android:orientation="vertical"
+android:padding="5dp"
+android:background="@drawable/round_dialog">
 
-
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:padding="10dp"
-        android:background="@drawable/round_dialog">
 
 
 
@@ -21,11 +16,10 @@
             android:id="@+id/frag_des"
             android:layout_width="match_parent"
             android:layout_height="600dp"
-
             android:gravity="right"
             android:textColor="#ffffff"
             android:textSize="15sp"
-            android:scrollbars = "vertical"
+            android:scrollbars = "none"
             android:layout_margin="10dp"
             android:textStyle="bold"/>
 
@@ -34,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="المرجع"
-                android:gravity="left"
+                android:gravity="right"
                 android:textColor="#ffffff"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -43,4 +37,4 @@
                 android:layout_marginLeft="10dp"/>
 
 </LinearLayout>
-</ScrollView>
+
