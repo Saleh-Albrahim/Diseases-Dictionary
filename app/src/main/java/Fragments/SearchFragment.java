@@ -70,14 +70,28 @@ public class SearchFragment extends Fragment {
                     d.setTitle(ds.getValue(DiseasesModel.class).getTitle());
                     d.setUrl(ds.getValue(DiseasesModel.class).getUrl());
                     data.add(d);
-                    Log.d(TAG,  d.getTitle());
-                    Log.d(TAG,  d.getDescription());
-                    Log.d(TAG,  d.getUrl());
-                    Log.d(TAG,  d.getId());
+//                    Log.d(TAG,  d.getTitle());
+//                    Log.d(TAG,  d.getDescription());
+//                    Log.d(TAG,  d.getUrl());
+//                    Log.d(TAG,  d.getId());
 
 
                 }
-                ShowList();
+                DataADB itemsAdapter = new DataADB(view.getContext(), data);
+                ListView listView =  view.findViewById(R.id.list);
+                listView.setAdapter(itemsAdapter);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                        DiseasesModel data= (DiseasesModel) parent.getAdapter().getItem(position);
+                        FragmentManager manager = ((AppCompatActivity) view.getContext()).getSupportFragmentManager();
+                        bundle.putString("Description", data.getDescription());
+                        bundle.putString("Url", data.getUrl());
+                        fragment.setArguments(bundle);
+                        fragment.show(manager, null);
+                    }
+                });
 
             }
 
@@ -90,25 +104,7 @@ public class SearchFragment extends Fragment {
         });
 
     }
-
-    private void ShowList(){
-        DataADB itemsAdapter = new DataADB(view.getContext(), data);
-        ListView listView =  view.findViewById(R.id.list);
-        listView.setAdapter(itemsAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                DiseasesModel data= (DiseasesModel) parent.getAdapter().getItem(position);
-                FragmentManager manager = ((AppCompatActivity) view.getContext()).getSupportFragmentManager();
-                bundle.putString("Description", data.getDescription());
-                bundle.putString("Url", data.getUrl());
-                fragment.setArguments(bundle);
-                fragment.show(manager, null);
-            }
-        });
-
-    }
+    
 
 
 

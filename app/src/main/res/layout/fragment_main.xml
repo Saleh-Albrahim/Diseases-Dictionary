@@ -48,7 +48,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="البحث عن مرض معين  "
+                android:text="دليل الامراض "
                 android:paddingStart="5dp"
                 android:paddingEnd="5dp"
                 android:textSize="30dp"
